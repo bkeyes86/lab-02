@@ -23,13 +23,9 @@ Creature.all = [];
 
 
 Creature.prototype.render = function () {
-  let $template = $('.photo-template').clone();
-  $template.removeClass('photo-template');
-  $template.find('.title').text(this.getTitle);
-  $template.find('.creatureImage').attr('src', this.imgUrl);
-  $template.find('.creatureImage').attr('alt', this.getTitle);
-  $template.find('.description').text(this.getDescription);
-  return $template;
+  const templateHTML = $('#photo-template').html();
+  const renderedHTML = Mustache.render(templateHTML, this);
+  return renderedHTML;
 };
 function renderCreature() {
   Creature.all.forEach(creature => $('#photo-gallery').append(creature.render()));

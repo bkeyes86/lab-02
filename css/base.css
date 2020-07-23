@@ -15,12 +15,12 @@ body {
   background: teal;
   margin: 0 auto;
   max-width: 928px;
+  display: flex;
+  flex-wrap: wrap;
+
 }
-#photo-gallery:after {
-  content: "";
-  display: table;
-  clear: both;
-}
+
+
 h1 {
   text-align: center;
   font-size: 4em;
