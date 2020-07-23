@@ -1,7 +1,8 @@
 .creature {
-  max-width: 200px;
+  width: 200px;
   padding: 1em;
   background-color: whitesmoke;
-  float: left;
+  display: flex;
+  flex-wrap: wrap;
   
 }
